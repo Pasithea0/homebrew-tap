@@ -60,10 +60,14 @@ Source and documentation: [Pasithea0/siri-cli](https://github.com/Pasithea0/siri
 Each project's release pipeline updates its formula here, so `brew upgrade` picks
 up new releases without anything to do by hand.
 
-- **plex-sync** is released with goreleaser, which writes `Formula/plex-sync.rb`
-  here from the release it just built.
-- **siri-cli** finalises its own formula in its source repository and mirrors it
-  into `Formula/siri-cli.rb` here.
+- **plex-sync**: the release workflow runs `scripts/update-homebrew-formula.py`,
+  which rewrites the version in each platform URL and takes every sha256 from the
+  `checksums.txt` the release published. It needs a `HOMEBREW_TAP_TOKEN` secret
+  with write access to this repository; without it the release still succeeds and
+  the formula is left as it is.
+- **siri-cli**: the release workflow finalises its own formula in its source
+  repository and mirrors it into `Formula/siri-cli.rb` here.
 
-The formula in this repository is the one Homebrew installs. If one ever looks
-out of date, the release that would have updated it did not run.
+The formula in this repository is the one Homebrew installs. If one looks out of
+date, the release that would have updated it did not run — the URL and the
+version in the file say which release it last heard from.
