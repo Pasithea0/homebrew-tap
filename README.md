@@ -4,15 +4,10 @@ Homebrew formulae for my tools.
 
 ```
 brew tap Pasithea0/tap
+brew trust pasithea0/tap
 ```
-
-Then install what you need. Both formulae need a one-time trust step, because
-Homebrew now checks formulae that come from outside its own taps:
-
-```
-brew trust --formula pasithea0/tap/siri-cli   # one-time
-brew trust --formula pasithea0/tap/plex-sync  # one-time
-```
+Taps require a one-time trust step, because
+Homebrew now checks formulae that come from outside its own taps.
 
 ## plex-sync
 
@@ -55,19 +50,3 @@ and fully quit and relaunch your terminal. Verify with `siri status`.
 
 Source and documentation: [Pasithea0/siri-cli](https://github.com/Pasithea0/siri-cli).
 
-## How these formulae are kept up to date
-
-Each project's release pipeline updates its formula here, so `brew upgrade` picks
-up new releases without anything to do by hand.
-
-- **plex-sync**: the release workflow runs `scripts/update-homebrew-formula.py`,
-  which rewrites the version in each platform URL and takes every sha256 from the
-  `checksums.txt` the release published. It needs a `HOMEBREW_TAP_TOKEN` secret
-  with write access to this repository; without it the release still succeeds and
-  the formula is left as it is.
-- **siri-cli**: the release workflow finalises its own formula in its source
-  repository and mirrors it into `Formula/siri-cli.rb` here.
-
-The formula in this repository is the one Homebrew installs. If one looks out of
-date, the release that would have updated it did not run — the URL and the
-version in the file say which release it last heard from.
