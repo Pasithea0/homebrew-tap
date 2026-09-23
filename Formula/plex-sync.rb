@@ -24,25 +24,25 @@ class PlexSync < Formula
   # running Linux, but Homebrew on Linux is 64-bit, so it is left out.
   on_macos do
     on_arm do
-      url "https://github.com/TheIntroDB/plex-sync/releases/download/v0.5.0/plex-sync_0.5.0_darwin_arm64.tar.gz"
-      sha256 "a8172afa452d42f2a1f80e49772c3d7060b9f901aeb00277f29eb8d2c90c926c"
+      url "https://github.com/TheIntroDB/plex-sync/releases/download/v0.5.1/plex-sync_0.5.1_darwin_arm64.tar.gz"
+      sha256 "eeb90c1c7fe3a855a19b67f4988590fd2f4a93319d92d0c038181b768133f2f1"
     end
 
     on_intel do
-      url "https://github.com/TheIntroDB/plex-sync/releases/download/v0.5.0/plex-sync_0.5.0_darwin_amd64.tar.gz"
-      sha256 "9b8b086f8e916068daa8d9b3271cdb0d2004d2b1015461409bfd669c015f2fd9"
+      url "https://github.com/TheIntroDB/plex-sync/releases/download/v0.5.1/plex-sync_0.5.1_darwin_amd64.tar.gz"
+      sha256 "c4e70fa989f95becc1f29aec82bf316d712d998e4444a3beed9f1bdcb24e6aba"
     end
   end
 
   on_linux do
     on_arm do
-      url "https://github.com/TheIntroDB/plex-sync/releases/download/v0.5.0/plex-sync_0.5.0_linux_arm64.tar.gz"
-      sha256 "f0e664c9d98206dba9617af0d3695ce96d5833c0ae7df80980bd047d5e9cfd68"
+      url "https://github.com/TheIntroDB/plex-sync/releases/download/v0.5.1/plex-sync_0.5.1_linux_arm64.tar.gz"
+      sha256 "84ab61599181b36df718aee0ea2090344d4645dc2e2f1ff3c78e4f9450465b24"
     end
 
     on_intel do
-      url "https://github.com/TheIntroDB/plex-sync/releases/download/v0.5.0/plex-sync_0.5.0_linux_amd64.tar.gz"
-      sha256 "ef8df4f72efbaa2e3ac76a29eab007b307aa77be7225fcbea59361249ca3c5af"
+      url "https://github.com/TheIntroDB/plex-sync/releases/download/v0.5.1/plex-sync_0.5.1_linux_amd64.tar.gz"
+      sha256 "c1f0021bad8deeb602a00fc7715704599a0f1f50849e7dfb2276efaa831719d8"
     end
   end
 
